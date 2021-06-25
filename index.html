@@ -15,9 +15,13 @@
             <h1>To-Do List</h1>
         </div>
         <div>
-            <input type="text" id="curTime">
-            <input type="text" id="textBox" maxlength="40">
-            <button>Add Task</button>
+            <!-- <input class="currentTime" id="curTime" type="text"> -->
+            <!-- <span class="currentTime" id="curTime">00:00:00</span> -->
+            <input class="inputBox" type="text" id="textBox" maxlength="40">
+            <button id="addTask" onclick="taskAdd()">Add Task</button>
+        </div>
+        <div>
+            <ol id="listMain"></ol>
         </div>
 
     </div>
