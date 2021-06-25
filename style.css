@@ -35,6 +35,7 @@ ol{
 }
 .inputBox:disabled{
 color: white;
+font-weight: 900;
 }
 .inputBox:focus{
     outline:none;
