@@ -31,16 +31,16 @@ function taskAdd() {
 
         listText.setAttribute('disabled', 'disabled');
         listText.setAttribute('class','inputBox')
-        listText.value = task.value;
+        listText.value = task.value.toUpperCase();
 
         var editBtn = document.createElement('button')
         var edittext = document.createTextNode('Edit')
-        editBtn.setAttribute('class','btn btn-success')
+        editBtn.setAttribute('class','btn btn-success btnU')
         editBtn.appendChild(edittext)
         editBtn.setAttribute('onclick', 'edit(this.previousSibling)')
         var delBtn = document.createElement('button')
         var deltext = document.createTextNode('Delete')
-        delBtn.setAttribute('class','btn btn-danger')
+        delBtn.setAttribute('class','btn btn-danger btnU')
         delBtn.appendChild(deltext);
         delBtn.setAttribute('onclick', 'del(this)')
         delBtn.setAttribute('id', 'delete')
