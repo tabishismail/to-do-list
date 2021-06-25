@@ -30,14 +30,17 @@ function taskAdd() {
         var listText = document.createElement("input");
 
         listText.setAttribute('disabled', 'disabled');
+        listText.setAttribute('class','inputBox')
         listText.value = task.value;
 
         var editBtn = document.createElement('button')
         var edittext = document.createTextNode('Edit')
+        editBtn.setAttribute('class','btn btn-success')
         editBtn.appendChild(edittext)
         editBtn.setAttribute('onclick', 'edit(this.previousSibling)')
         var delBtn = document.createElement('button')
         var deltext = document.createTextNode('Delete')
+        delBtn.setAttribute('class','btn btn-danger')
         delBtn.appendChild(deltext);
         delBtn.setAttribute('onclick', 'del(this)')
         delBtn.setAttribute('id', 'delete')
@@ -46,7 +49,6 @@ function taskAdd() {
         list.appendChild(editBtn);
         list.appendChild(delBtn);
         listMain.appendChild(list);
-
         task.setAttribute('Placeholder', 'Enter task to add in the list');
         task.value = "";
     }
@@ -67,7 +69,6 @@ function edit(listData) {
     else if (check === "Update") {
         listData.disabled = true;
         listData.nextSibling.innerText = "Edit";
-        // var del=document.getElementById("delete");
         del.disabled = false;
     }
 }
